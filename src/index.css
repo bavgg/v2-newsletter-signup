@@ -1,0 +1,100 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --tomato: hsl(4, 100%, 67%);
+  --tomato: hsl(4, 100%, 67%);
+
+  --darkSlateGrey: hsl(234, 29%, 20%);
+  --charcoal: hsl(235, 18%, 26%);
+  --grey: hsl(231, 7%, 60%);
+  --white: hsl(0, 0%, 100%);
+
+  --bold: 700;
+  --regular: 400;
+
+  --lineHeight: 150%;
+}
+
+body {
+  font-family: 'Roboto';
+  font-size: 16px;
+  font-weight: var(--regular);
+
+
+  box-sizing: border-box;
+
+  background-color: var(--darkSlateGrey);
+  height: 100vh;
+
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+html {
+  -moz-osx-font-smoothing: grayscale;
+}
+
+ul {
+  list-style: none;
+  padding-left: 38px;
+}
+
+#list {
+  list-style: none;
+  position: relative;
+}
+#list li::before {
+  content: "";
+  display: block;
+  width: 21px;
+  height: 21px;
+  position: absolute;
+  left: 4px;
+  /* Replace with inline SVG code for checkmark */
+  background-image: url('/images/icon-list.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-right: 10px;
+}
+
+.text-small {
+  /* font-size: var(--font-sm); */
+  font-size: clamp(12px, 3vw, 14px);
+}
+.text-medium {
+  /* font-size: var(--font-md); */
+  font-size: clamp(14px, 3.7vw, 16px);
+}
+.text-large {
+  /* font-size: var(--font-lg); */
+  font-size: clamp(32px, 6.35vw, 38px);
+}
+
+@media (min-width: 375px) {
+
+  #row-flex {
+    flex-direction: row;
+    align-items: center;
+    gap: 36px;
+  }
+  #signup {
+    padding-left: 24px;
+  }
+
+  #i-mobile {
+    display: none;
+  }
+
+  #i-desktop {
+    display: block;
+  }
+
+}
+
+#subscribe:hover {
+  background-image: linear-gradient(to right, #f95078, hsl(4, 100%, 67%));
+}
